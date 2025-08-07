@@ -9,3 +9,33 @@
 # Se a pessoa responder positivamente a 2 questoes ela deve ser classificada como "Suspeita",
 # entre 3 e 4 como "Cumplice" e 5 como "Assasino". Caso contrario, ele será classificado como "Inocente".
 
+respostas = [
+    input("Telefonou para a vitima (S / N )? ").strip().lower(),
+    input("Esteve no local do crime (S / N )? ").strip().lower(),
+    input("Mora perto da vitima (S / N )? ").strip().lower(),
+    input("Devia para a vitima (S / N )? ").strip().lower(),
+    input("Ja trabalhou para a vitima (S / N )? ").strip().lower(),
+    ]
+
+     
+positivas = respostas.count("s")
+    
+if positivas == 2:
+    print("Suspeita")
+elif positivas > 2 and positivas < 5:
+    print("Cumplice")
+elif positivas == 5:
+    print("Assasino")
+else:
+    print("Inocente")
+
+    
+
+
+
+
+
+
+
+
+
